@@ -1,0 +1,16 @@
+<section>
+  <section *ngIf="isLoading && !errorMessage">
+    Loading our hyperdrives!!! Retrieving data...
+  </section>
+  <ul>
+    <!-- this is the new syntax for ng-repeat -->
+    <li *ngFor="let x of comments">
+
+        {{x.body}}
+
+    </li>
+  </ul>
+  <section *ngIf="errorMessage">
+    {{errorMessage}}
+  </section>
+</section>
